@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'css/register.css'%}">
+    <script src="navbar.js" defer></script>
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <div class="login-logo">
+        <img src="{%static 'images/LoginLogo.png'%}" height="423px" width="700px">
+        
+    </div>
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form action="{% url 'register' %}" method="post">
+            {%csrf_token%}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+    </div>
+</body>
+
+</html>

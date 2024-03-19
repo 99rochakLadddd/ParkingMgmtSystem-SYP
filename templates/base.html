@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="all-home">
+    <nav>  
+        <div class="nav-bar">
+            <div class="sys-logo">
+                <a href="/">  <img src="{%static 'images/homeLogo.png'%}" height="70px" width="120px"></a>
+                
+            </div>
+            
+            <div id="menu-bar">
+                <i class="ri-menu-2-fill"></i>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+
+            <div class="profile-menu">
+                <i class="ri-logout-box-line"></i>
+            </div>
+        </div>
+
+        <div id="content-side-bar">
+
+            <div id="bar-1">
+                <button type="button" onclick="redirectToDashboardPage()" class="custom-button btn-primary">
+                    Admin Dashboard
+                </button>
+            </div>
+        
+            <div id="bar-2">
+                <button type="button"  class="custom-button btn-primary">
+                    <a href="/new_car_registration"></a>
+                    New Car Registration
+                </button>
+            </div>
+            
+            <div id="bar-3">
+                
+                <button type="button" onclick="redirectToFalanoAdminPage()" class="custom-button btn-primary">
+                    Falano Admin
+                </button>
+            </div>
+            
+            <div id="bar-4">
+                <button type="button" onclick="redirectToManageUsersPage()" class="custom-button btn-primary">
+                    Manage Users
+                </button>
+            </div>   
+        </div>
+    </nav>
+    </div>
+</body>
+</html>

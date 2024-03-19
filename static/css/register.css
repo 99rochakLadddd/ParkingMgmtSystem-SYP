@@ -1,0 +1,99 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container for Login Logo */
+.login-logo {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+.login-logo img {
+    
+    position: absolute;
+    top: 140px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height: 380px;
+    width: 700px;
+    
+    
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: linen;
+    position: absolute;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 8px;
+    color: black;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button {
+    padding: 12px;
+    background-color: #06d5af;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: rgb(24, 255, 59);
+    color: black;
+}
+
+.form-container p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}

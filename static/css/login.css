@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(25, 17, 17);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(168, 109, 50);
+    
+}
+
+p {
+    margin-top: 16px;
+    text-align: center;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: sienna;
+}
+
+header h1 {
+    background-color: #0066cc;
+    
+    color: aqua;
+    margin: 10px 40px 50px 40px;
+    display: flex;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+header {
+    background-color: black;
+    margin:-200px 30px 300px 250px;
+    height: 100px;
+    width: 500px;
+}
+
+header div[name="system-name"] {
+    height: 80px;
+    width: 500px;
+    background-color: chartreuse;
+}
+
+nav .first-page {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav .first-page button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: -200px;
+}
+
+nav .first-page button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: aqua;
+    margin-top: 500px;
+    margin-right: 0px;
+}
+
+login-logo .img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    
+}
+
+
+

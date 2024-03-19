@@ -1,0 +1,221 @@
+/* Updated CSS for the layout */
+.all-home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 85px; /* Adjust margin-top to accommodate the fixed navbar */
+    height: 100%;
+    width: 100%;
+}
+
+.sys-logo img {
+    margin-left: -10px; /* Move the system logo to the right */
+    margin-right: 20px; /* Add margin to separate logo from menu bar */
+    height: 82px;
+    width: 150px;
+}
+
+.nav-bar {
+    height: 60px;
+    width: 100%;
+    background-color: #061d3c;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 1px 10px rgba(10, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Push menu bar to the right */
+}
+
+.nav-bar li {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 16px 10px;
+    cursor: pointer;
+}
+
+.nav-bar li:hover {
+    color: rgb(0, 191, 159);
+}
+
+.search-bar {
+    margin-left: auto; /* Adjust margin for spacing */
+    margin-right: 20px; /* Push search bar to the left */
+}
+
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: 13px;
+    color: aliceblue;
+    padding: 6px;
+    font-size: 10px;
+}
+
+.profile-menu {
+    margin-right: 20px; /* Push profile menu to the left */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: 13px;
+    color: aliceblue;
+    padding: 6px;
+    font-size: 20px;
+}
+
+.profile-menu:hover {
+    background-color: white; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    color: black;
+    transition: background-color 0.6s ease, box-shadow 0.5s ease;
+}
+
+.profile-menu img {
+    height: 40px;
+    width: 50px;
+}
+
+#menu-bar {
+    border: 1px solid wheat;
+    border-radius: 11px;
+    color: aliceblue;
+    padding: 6px;
+    font-size: 20px;
+}
+
+#menu-bar:hover {
+    background-color: white; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    color: black;
+    transition: background-color 0.6s ease, box-shadow 0.5s ease;
+}
+
+/* Content Side Bar Styles */
+#content-side-bar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align items to the left */
+    background-color: #eeff34;
+    color: white;
+    padding: 20px;
+}
+
+#content-side-bar > div {
+    margin-bottom: 10px; /* Adjust spacing between bars */
+    width: 100%; /* Each bar spans the full width */
+}
+
+/* #bar-1 h3,
+#bar-2 h3,
+#bar-3 h3,
+#bar-4 h3 {
+    background-color: rgb(13, 173, 175);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#bar-1 h3:hover,
+#bar-2 h3:hover,
+#bar-3 h3:hover,
+#bar-4 h3:hover {
+    background-color: white; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    color: black;
+    transition: background-color 0.6s ease, box-shadow 0.5s ease;
+} */
+/* 
+/* CSS */
+/* .btn {
+    display: inline-block;
+    font-weight: 200;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} */ */
+
+/* .btn-primary {
+    
+    background-color: #007bff;
+    border-color: #007bff;
+} */
+
+/* CSS */
+#content-side-bar {
+    background-color: #f8f9fa; /* Background color of the sidebar */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Adjust border radius as needed */
+}
+
+#content-side-bar div {
+    margin-bottom: 10px; /* Spacing between sidebar items */
+}
+
+.custom-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Adjust border radius as needed */
+    background-color: #0f3756; /* Primary button color */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #fffedd; /* Darker shade on hover */
+    color: black;
+}
+
+
+
+
+
+
+/* CSS */
+.sidebar-hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Add transitions for transform and opacity */
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Add transitions for transform and opacity */
+}
+
+
