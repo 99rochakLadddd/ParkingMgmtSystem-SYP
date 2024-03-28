@@ -1,0 +1,17 @@
+
+
+/* Style for the main content container */
+#manage_user_content {
+    margin: 50px auto; /* Center the content */
+    max-width: 800px; /* Set maximum width for the content */
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for the heading */
+#manage_user_content h1 {
+    color: #333; /* Dark gray color for the heading text */
+    text-align: center; /* Center align the heading */
+}
+

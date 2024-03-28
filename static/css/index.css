@@ -109,64 +109,18 @@
     position: fixed;
     top: 80px;
     left: 0;
+    width: 240px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; /* Align items to the left */
-    background-color: #eeff34;
+    background-color: #0b0c07;
     color: white;
     padding: 20px;
 }
+*/
 
-#content-side-bar > div {
-    margin-bottom: 10px; /* Adjust spacing between bars */
-    width: 100%; /* Each bar spans the full width */
-}
-
-/* #bar-1 h3,
-#bar-2 h3,
-#bar-3 h3,
-#bar-4 h3 {
-    background-color: rgb(13, 173, 175);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#bar-1 h3:hover,
-#bar-2 h3:hover,
-#bar-3 h3:hover,
-#bar-4 h3:hover {
-    background-color: white; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-    color: black;
-    transition: background-color 0.6s ease, box-shadow 0.5s ease;
-} */
-/* 
-/* CSS */
-/* .btn {
-    display: inline-block;
-    font-weight: 200;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-} */ */
-
-/* .btn-primary {
-    
-    background-color: #007bff;
-    border-color: #007bff;
-} */
 
 /* CSS */
 #content-side-bar {
@@ -181,7 +135,7 @@
 
 .custom-button {
     display: block;
-    width: 100%;
+    width: 200px;
     padding: 15px 20px; /* Adjust padding as needed */
     font-size: 16px; /* Adjust font size as needed */
     font-weight: bold;
@@ -190,19 +144,17 @@
     cursor: pointer;
     border: none;
     border-radius: 5px; /* Adjust border radius as needed */
-    background-color: #0f3756; /* Primary button color */
+    background-color: black; /* Primary button color */
     color: #ffffff; /* Text color */
     transition: background-color 0.3s ease;
+    
 }
 
 .custom-button:hover {
-    background-color: #fffedd; /* Darker shade on hover */
+    background-color: #ffffff;
+
     color: black;
 }
-
-
-
-
 
 
 /* CSS */

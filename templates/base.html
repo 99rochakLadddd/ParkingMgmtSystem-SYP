@@ -32,34 +32,36 @@
         </div>
 
         <div id="content-side-bar">
-
             <div id="bar-1">
-                <button type="button" onclick="redirectToDashboardPage()" class="custom-button btn-primary">
+                <a href="/" class="custom-button btn-primary">
                     Admin Dashboard
-                </button>
+                </a>
             </div>
         
             <div id="bar-2">
-                <button type="button"  class="custom-button btn-primary">
-                    <a href="/new_car_registration"></a>
+                <a href="{% url 'new_car_registration' %}" class="custom-button btn-primary">
                     New Car Registration
-                </button>
+                </a>
             </div>
-            
+        
             <div id="bar-3">
-                
-                <button type="button" onclick="redirectToFalanoAdminPage()" class="custom-button btn-primary">
+                <a href="/" class="custom-button btn-primary">
                     Falano Admin
-                </button>
+                </a>
             </div>
-            
+        
             <div id="bar-4">
-                <button type="button" onclick="redirectToManageUsersPage()" class="custom-button btn-primary">
+                <a href="{% url 'manage_user' %}" class="custom-button btn-primary">
                     Manage Users
-                </button>
-            </div>   
+                </a>
+            </div>
         </div>
+        
     </nav>
     </div>
 </body>
 </html>
+
+{% block content %}
+
+{% endblock%}
