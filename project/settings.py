@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app",
 
+
 ]
 
 #maile afaile haleko, inbuilt authentication backend can be used now inside app

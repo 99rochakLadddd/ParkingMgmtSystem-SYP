@@ -17,18 +17,19 @@
     </div>
     <div class="form-container">
         <h2>Signup</h2>
-        <form action="{% url 'register' %}" method="post">
+        <form action="{% url 'login' %}" method="post">
             {%csrf_token%}
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="{{form.username.id_for_label}}">Username:</label>
+            <input type="text" id="username" name="{{form.username.name}}" class="form-control" value="{{form.username.value}}"required/>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="{{form.password.id_for_label}}">Password:</label>
+            <input type="password" id="password" name="{{form.password.name}}" class="form-control" value="{{form.password.value}}" required>
 
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="{{form.confirm_password.id_for_label}}">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="{{form.confirm_password.name}}" class="form-control" value="{{form.confirm_password.value}}" required>
 
             <button type="submit">Signup</button>
+
         </form>
         <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
     </div>

@@ -14,7 +14,7 @@
     </div>
     <div class="form-container">
         <h2>Login</h2>
-        <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'index' %}" method="post">
             {%csrf_token%}
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
