@@ -22,7 +22,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path("admin/", admin.site.urls),
     # Define the path for the root URL to render index.html as the home page
-    path("", TemplateView.as_view(template_name='index.html'), name='index'),
+    path("", TemplateView.as_view(template_name='login.html'), name='login'),
     path("login/", views.login_view, name="login"),
     path("index/", views.index_view, name="index"),
     path("register/", views.register_view, name="register"),
@@ -30,6 +30,7 @@ urlpatterns = [
     path('base.html/', TemplateView.as_view(template_name='base.html'), name='base'),
     path("new_car_registration/", views.new_car_registration_view, name="new_car_registration"),
     path("manage_user.html/", views.manage_user_view, name="manage_user"),
+    path('admin/', views.admin_view, name='admin_view'),
 ]
 
 

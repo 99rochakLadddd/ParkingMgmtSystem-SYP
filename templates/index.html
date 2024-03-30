@@ -8,21 +8,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <title>Welcome to the Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #new_car_reg_title_1 {
+            background-color:black;
+            margin-top: 20px;
+            padding: 10px;
+            height: 30px;
+            width: 50em;
+            color: rgb(255, 254, 254);
+            margin-left: 355px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 15px ;
+            border: 3px solid rgb(255, 255, 255);
+            background-color:  #061d3c;
+            box-shadow: 0 1px 10px rgba(10,0,0,0.3), 0 0 0px rgba(0,0,0,0.1) inset;
+              
+        }
+        .dashboard {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 30px;
+            margin-left:370px;
+            gap: 30px;
+            background-color: white;
+        }
+
+        .card-r {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color:brown ;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+             
+        }
+
+        .card-g {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: green;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+             
+        }
+        .card-y {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: orange;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+             
+        }
+
+        .ri-car-fill {
+            color:orange;
+            font-size:larger;
+        }
+
+        .ri-cash-line {
+            color:green;
+            font-size:larger;
+        }
+
+        .ri-team-fill{
+            color:red;
+            font-size:larger;
+        }
+
+        .card-r h3 {
+            margin: 0;
+            font-size: 0.8rem;
+            color: white;
+            margin-right:80px;
+            
+        }
+
+        .card-g h3 {
+            margin: 0;
+            font-size: 0.8rem;
+            color: white;
+            margin-right:80px;
+        }
+
+        .card-y h3 {
+            margin: 0;
+            font-size: 0.8rem;
+            color: white;
+            margin-right:80px;
+        }
+
+        .card-r p {
+            margin: 5px -85px;
+            font-size: 1.2rem;
+            color: white;
+            margin-left: -100px
+        }
+
+        .card-g p {
+            margin: 5px -85px;
+            font-size: 1.2rem;
+            color: white;
+            margin-left: -100px
+        }
+
+        .card-y p {
+            margin: 5px -85px;
+            font-size: 1.2rem;
+            color: white;
+            margin-left: -100px
+        }
+    </style>
+    <title>Dashboard Example</title>
 </head>
 <body>
-    <div id="dashboard-content">
-        <h1> Admin Dashbaord: {{request.user.username}}</h1>
-         
+    <div id="new_car_reg_content">
+        <div id="new_car_reg_title_1">
+            <h3>Dashboard Overview</h3>
+        </div>
     </div>
-
-    
-    {% comment %} <script src="{% static 'js/navbar.js' %}"></script> {% endcomment %}
+    <div class="dashboard">
+        <div class="card-r">
+            <p>NRP 35,000 <i class="ri-cash-line"></i></p>
+            <div>_______________________</div><br>
+            <h3>Total Amount</h3>
+            <h3>More Info</h3>
+        </div>
+        <div class="card-g">
+            <p>3 <i class="ri-car-fill"></i></p> 
+            <div>_______________________</div><br>
+            <h3>Total Vehicles</h3>
+            <h3>More Info</h3>
+        </div>
+        <div class="card-y">
+            <p>3 <i class="ri-team-fill"></i></p>
+            <div>_______________________</div><br>
+            <h3>Total Users</h3>
+            <h3>More Info</h3>
+        </div>
+    </div>
 </body>
 </html>
-
-
-{% endblock%} 
-
+    {% endblock %}

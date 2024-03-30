@@ -14,7 +14,7 @@
     <nav>  
         <div class="nav-bar">
             <div class="sys-logo">
-                <a href="/">  <img src="{%static 'images/homeLogo.png'%}" height="70px" width="120px"></a>
+                <a href="{% url 'index'%}">  <img src="{%static 'images/homeLogo.png'%}" height="70px" width="120px"></a>
                 
             </div>
             
@@ -34,7 +34,15 @@
         <div id="content-side-bar">
             <div id="bar-1">
                 <a href="{% url 'index' %}" class="custom-button btn-primary">
-                    Admin Dashboard
+                    <i class="ri-home-4-line"></i>       System Dashboard
+                    
+                </a>
+                
+            </div>
+
+            <div id="bar-3">
+                <a href="{% url 'index' %}" class="custom-button btn-primary">
+                    rochak, Admin
                 </a>
             </div>
         
@@ -44,11 +52,6 @@
                 </a>
             </div>
         
-            <div id="bar-3">
-                <a href="/" class="custom-button btn-primary">
-                    Falano Admin
-                </a>
-            </div>
         
             <div id="bar-4">
                 <a href="{% url 'manage_user' %}" class="custom-button btn-primary">

@@ -1,0 +1,188 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+#new_car_reg_content {
+    /* background-color: white; */
+    width: 80em; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    top:61%;
+    left:27%;
+    justify-content: space-around;
+    /* box-shadow: 0 1px 10px rgba(10,0,0,0.3), 0 0 0px rgba(0,0,0,0.1) inset; */
+    transform:translate(-50%,-50%);
+    position:relative;
+
+}
+
+#new_car_reg_title {
+    background-color:black;
+    margin-top: 20px;
+    padding: 10px;
+    height: 30px;
+    width: 50em;
+    color: rgb(255, 254, 254);
+    top:-90%;
+    left:-11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px ;
+    border: 3px solid rgb(255, 255, 255);
+    background-color:  #061d3c;
+    box-shadow: 0 1px 10px rgba(10,0,0,0.3), 0 0 0px rgba(0,0,0,0.1) inset;
+
+}
+
+/* #new_car_reg_title h3 {
+    margin-right: 31em;
+} */
+
+#new_car_reg_semi_title {
+    background-color:black;
+    margin-top: 20px;
+    padding: 10px;
+    height: 30px;
+    width: 50em;
+    color: rgb(255, 254, 254);
+    top:-90%;
+    left:-11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1px ;
+    background-color:  #061d3c;
+    box-shadow: 0 1px 10px rgba(10,0,0,0.3), 0 0 0px rgba(0,0,0,0.1) inset;
+    
+}
+
+#new_car_reg_semi_title h3 {
+    margin-right: 30em;
+    
+}
+
+/* .form-group {
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: bisque;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px;
+} */
+/* 
+.row {
+    position: relative;
+    background-color: blueviolet;
+    height: 100px;
+
+} */
+
+.form-group {
+    border-top: 20px white;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 0px;
+    width: 99%;
+    
+}
+
+#form-group {
+
+    align-items: center;
+    border-top: 1px solid #ccc ;
+    padding-top: 10px;
+    margin-top: 0px;
+    width: 100%;
+    
+}
+
+.form-group-btn {
+    padding: 5px;
+    align-items: center;
+    border-top: 1px solid #ccc ;
+    padding-top: 10px;
+    margin-top: 20px;
+    width: 99%;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 48%; /* Adjust the value as needed */
+    
+    
+}
+
+
+textarea {
+    width: 310px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    height: 80px;
+    margin-left: 31px;
+    
+}
+
+
+.form-group label {
+    font-weight: bold;
+  }
+  
+.form-group input {
+    height: 35px;
+    margin:10px;
+    margin-left: 30px;
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+  }
+  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #45a049;
+  }
+
+.card-header {
+
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    background-color:  #061d3c;
+    height: 20px;
+    width: 304px;
+    padding: 10px;
+    color: rgb(255, 254, 254);
+    display: flex;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-0%,-0%);
+    border-radius: 1px ;
+    box-shadow: 0 1px 10px rgba(10,0,0,0.3), 0 0 0px rgba(0,0,0,0.1) inset;
+
+}
