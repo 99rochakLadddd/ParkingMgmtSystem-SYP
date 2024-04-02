@@ -1,6 +1,8 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.html import escape, mark_safe
+from .models import models
+
 
 
 # class User(AbstractUser):
@@ -21,14 +23,18 @@ class User(models.Model):
         return self.email
 
 
-# class Customer(models.Model):
-#     first_name = models.CharField(max_length=100)
-#     last_name = models.CharField(max_length=100)
-#     phone_number = models.CharField(max_length=100)
-#     car_model = models.CharField(max_length=100)
-#     car_color = models.CharField(max_length=100)
-#     comment = models.TextField(max_length=5000, blank=True)
-#     cost_per_day = models.IntegerField(null=True, blank=True)
-#     register_name = models.CharField(max_length=100)
-#     reg_date = models.DateTimeField(auto_now_add=True)
-#     exit_date = models.DateTimeField(null=True, blank=True)    
+
+
+class RegisteredCar(models.Model):
+
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=15)
+    vehicle_number = models.CharField(max_length=20)
+    vehicle_color = models.CharField(max_length=50)
+    model_number = models.CharField(max_length=50)
+    register_name = models.CharField(max_length=200)
+    comment = models.TextField()
+
+
+

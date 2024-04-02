@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from app import views
 from django.views.generic import TemplateView
+# from .views import new_car_registration_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -31,6 +32,7 @@ urlpatterns = [
     path("new_car_registration/", views.new_car_registration_view, name="new_car_registration"),
     path("manage_user.html/", views.manage_user_view, name="manage_user"),
     path('admin/', views.admin_view, name='admin_view'),
+    # path('create/', views.new_car_registration_view,name="new_car_registration")
 ]
 
 

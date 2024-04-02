@@ -21,22 +21,22 @@
             <h3> <i class="ri-roadster-fill">   </i> New vehicle Registration </h3> 
         </div>
 
-        <form action="" method="post">
+        <form action="{% url 'new_car_registration' %}" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 <div class="row">
-                    <div class="col"><input type="text" id="first_name" name="first_name" placeholder="First Name" required></div>
-                    <div class="col"><input type="text" id="last_name" name="last_name" placeholder="Last Name" required></div>
+                    <div class="col"><input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required></div>
+                    <div class="col"><input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required></div>
                 </div>
             
                 <div class="row">
-                    <div class="col"><input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required></div>
-                    <div class="col"><input type="text" id="car_number" name="car_number" placeholder="Vehicle Number" required></div>
+                    <div class="col"><input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Phone Number" required></div>
+                    <div class="col"><input type="text" class="form-control" id="vehicle_number" name="vehicle_number" placeholder="Vehicle Number" required></div>
                 </div>
             
                 <div class="row">
-                    <div class="col"><input type="text" id="vehicle_color" name="vehicle_color" placeholder="Vehicle Color" required></div>
-                    <div class="col"><input type="text" id="model_number" name="model_number" placeholder="Model Number" required></div>
+                    <div class="col"><input type="text" class="form-control" id="vehicle_color" name="vehicle_color" placeholder="Vehicle Color" required></div>
+                    <div class="col"><input type="text" class="form-control" id="model_number" name="model_number" placeholder="Model Number" required></div>
                 </div>
             
                 <div id="form-group">
@@ -59,8 +59,8 @@
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
                 </div>
             </div>
-            </form>
-            </div>
+        </form>
+    </div>
 
     
     {% comment %} <script src="{% static 'js/navbar.js' %}"></script> {% endcomment %}
