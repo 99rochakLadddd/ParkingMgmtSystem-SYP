@@ -10,17 +10,21 @@ class User(models.Model):
         return self.name
     
 
-from django.db import models
+    def _str_(self):
+        return self.email
+
+
 
 class NewCarRegistration(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
     vehicle_number = models.CharField(max_length=20)
-    vehicle_color = models.CharField(max_length=50)
+    vehicle_color = models.CharField(max_length=30)
     model_number = models.CharField(max_length=50)
-    register_name = models.CharField(max_length=100)  # This matches the input field name
+    register_name = models.CharField(max_length=100)
     comment = models.TextField()
-
+    
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.vehicle_number}"
+        return self.vehicle_number
+

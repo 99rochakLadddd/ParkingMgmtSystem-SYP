@@ -32,12 +32,10 @@ urlpatterns = [
     path("register/", views.register_view, name="register"),
     path('logout/', views.logout_view, name='logout'),
     path('base.html/', TemplateView.as_view(template_name='base.html'), name='base'),
-    # path("new_car_registration/", views.new_car_registration_view, name="new_car_registration"),
+    path('new_registration/', views.new_car_registration, name='new_car_registration'),
+    path('thankyou', views.thankyou_view, name='thankyou'),
     path("manage_user.html/", views.manage_user_view, name="manage_user"),
     path('admin/', views.admin_view, name='admin_view'),
-    path("new_car_registration/", views.new_car_registration, name="new_car_registration"),
-
-    
     path('user_list/', views.user_list, name='user_list'),  # URL for displaying the user list
     path('add_user/', views.add_user, name='add_user'),  # URL for adding a new user
     path('edit_user/<int:user_id>/', views.edit_user, name='edit_user'),  # URL for editing a user
