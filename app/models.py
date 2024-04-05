@@ -1,40 +1,26 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.utils.html import escape, mark_safe
-from .models import models
-
-
-
-# class User(AbstractUser):
-#     is_admin = models.BooleanField(default=False)
-#     is_cashier = models.BooleanField(default=False)
-
-#     class Meta:
-#         swappable = 'AUTH_USER_MODEL'
 
 class User(models.Model):
-    username = models.CharField(max_length=100)
-    # Add more fields as per your requirements
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    address = models.TextField()
+    phone = models.CharField(max_length=15)
 
-    def _str_(self):
-        return self.username
+    def __str__(self):
+        return self.name
+    
 
-    def _str_(self):
-        return self.email
+from django.db import models
 
-
-
-
-class RegisteredCar(models.Model):
-
+class NewCarRegistration(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
     vehicle_number = models.CharField(max_length=20)
     vehicle_color = models.CharField(max_length=50)
     model_number = models.CharField(max_length=50)
-    register_name = models.CharField(max_length=200)
+    register_name = models.CharField(max_length=100)  # This matches the input field name
     comment = models.TextField()
 
-
-
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} - {self.vehicle_number}"

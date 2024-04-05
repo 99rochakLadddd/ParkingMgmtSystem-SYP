@@ -21,22 +21,22 @@
             <h3> <i class="ri-roadster-fill">   </i> New vehicle Registration </h3> 
         </div>
 
-        <form action="{% url 'new_car_registration' %}" method="POST">
+        <form method="post" action="{% url 'index' %}">
             {% csrf_token %}
             <div class="form-group">
                 <div class="row">
-                    <div class="col"><input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required></div>
-                    <div class="col"><input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required></div>
+                    <div class="col"><input type="text"  id="first_name" name="first_name" placeholder="First Name" required></div>
+                    <div class="col"><input type="text"  id="last_name" name="last_name" placeholder="Last Name" required></div>
                 </div>
             
                 <div class="row">
-                    <div class="col"><input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Phone Number" required></div>
-                    <div class="col"><input type="text" class="form-control" id="vehicle_number" name="vehicle_number" placeholder="Vehicle Number" required></div>
+                    <div class="col"><input type="text"  id="phone_number" name="phone_number" placeholder="Phone Number" required></div>
+                    <div class="col"><input type="text"  id="vehicle_number" name="vehicle_number" placeholder="Vehicle Number" required></div>
                 </div>
             
                 <div class="row">
-                    <div class="col"><input type="text" class="form-control" id="vehicle_color" name="vehicle_color" placeholder="Vehicle Color" required></div>
-                    <div class="col"><input type="text" class="form-control" id="model_number" name="model_number" placeholder="Model Number" required></div>
+                    <div class="col"><input type="text"  id="vehicle_color" name="vehicle_color" placeholder="Vehicle Color" required></div>
+                    <div class="col"><input type="text"  id="model_number" name="model_number" placeholder="Model Number" required></div>
                 </div>
             
                 <div id="form-group">
@@ -44,13 +44,13 @@
                         <div class="col">
                             <br>
                             <center><div class="card-header text-primary">Registered By:</div></center>
-                            <input type="text" class="form-control" name="register_name" placeholder="Write Full Name" required="required">
+                            <input type="text" name="register_name" placeholder="Write Full Name" required="required">
                         </div>
             
                         <div class="col">
                             <br>
                             <center><div class="card-header text-primary">Any Comment</div></center>
-                            <textarea rows="8" cols="12" name="comment" class="form-control" required></textarea>
+                            <textarea rows="8" cols="12" name="comment" required></textarea>
                         </div>
                     </div>          
                 </div>
