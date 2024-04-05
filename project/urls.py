@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 
+from django.shortcuts import redirect
 from django.urls import path, include
 from app import views
 from django.views.generic import TemplateView
@@ -34,9 +35,9 @@ urlpatterns = [
     path('base.html/', TemplateView.as_view(template_name='base.html'), name='base'),
     path('new_registration/', views.new_car_registration, name='new_car_registration'),
     path('thankyou', views.thankyou_view, name='thankyou'),
-    path("manage_user.html/", views.manage_user_view, name="manage_user"),
+    # path("manage_user/", lambda request: redirect('user_list', permanent=True)),
+    path("users/", views.user_list, name="user_list"),
     path('admin/', views.admin_view, name='admin_view'),
-    path('user_list/', views.user_list, name='user_list'),  # URL for displaying the user list
     path('add_user/', views.add_user, name='add_user'),  # URL for adding a new user
     path('edit_user/<int:user_id>/', views.edit_user, name='edit_user'),  # URL for editing a user
     path('delete_user/<int:user_id>/', views.delete_user, name='delete_user'),  # URL for deleting a user

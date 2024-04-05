@@ -37,6 +37,7 @@ def thankyou_view(request):
 def manage_user_view(request):
     return render(request, 'manage_user.html')
 
+
 # Other view functions remain unchanged
 def admin_view(request):
     # Your admin view logic goes here
@@ -58,7 +59,7 @@ def add_user(request):
         # Form validation
         if not (name and email and address and phone):
             messages.error(request, 'All fields are required.')
-            return redirect('manage_user')
+            return redirect('user_list')
         
         # Create new user
         try:
@@ -73,10 +74,10 @@ def add_user(request):
             messages.error(request, f'Failed to add user: {e}')
         
         # Redirect to manage user page
-        return redirect('manage_user')
+        return redirect('user_list')
     
     # Render form for adding user
-    return render(request, 'manage_user.html')
+    return redirect('user_list')
 
 from django.shortcuts import get_object_or_404
 
