@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout  # Import the logout function
-from .models import RegisteredCar
-from django.contrib import messages
+from .models import CarRegistration
+from django.views.decorators.http import require_POST
 
 
 def home(request):
@@ -30,9 +30,8 @@ def logout_view(request):
 def index_view(request):
     return render(request, 'index.html')
 
-def new_car_registration_view(request):
-    # Your view logic goes here
-    return render(request, 'new_car_registration.html')
+def thankyou_view(request):
+    return render(request, 'thankyou_carreg.html')
 
 def manage_user_view(request):
     return render(request, 'manage_user.html')
@@ -42,22 +41,22 @@ def admin_view(request):
     # Your admin view logic goes here
     return render(request, 'admin_view.html')
 
-######updated from gpt#####
+
 def new_car_registration(request):
     if request.method == 'POST':
-        ##retrieving user input
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
-        phone_number = request.POST.get('phone_number')
-        vehicle_number = request.POST.get('vehicle_number')
-        vehicle_color = request.POST.get('vehicle_color')
-        model_number = request.POST.get('model_number')
-        register_name = request.POST.get('register_name')
-        comment = request.POST.get('comment')
-
-        # Save the submitted data to the database
-        r = RegisteredCar(first_name = first_name, last_name = last_name, phone_number = phone_number, vehicle_number = vehicle_number, vehicle_color = vehicle_color, model_number = model_number, register_name = register_name, comment = comment)
-        r.save()
-        messages.success(request, 'Vehicle Registered Successfully')
-
-    return redirect('new_car_registration')
+        car_registration = CarRegistration(
+        first_name=request.POST['first_name'],
+        last_name=request.POST['last_name'],
+        phone_number=request.POST['phone_number'],
+        vehicle_number=request.POST['vehicle_number'],
+        vehicle_color=request.POST['vehicle_color'],
+        model_number=request.POST['model_number'],
+        register_name=request.POST['register_name'],
+        comment=request.POST['comment']
+        )
+        car_registration.save()
+        # Handle form submission
+        return redirect('/thankyou')
+    else:
+        # For GET requests, show the form or do something else
+        return render(request, 'new_car_registration.html')

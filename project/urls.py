@@ -29,7 +29,8 @@ urlpatterns = [
     path("register/", views.register_view, name="register"),
     path('logout/', views.logout_view, name='logout'),
     path('base.html/', TemplateView.as_view(template_name='base.html'), name='base'),
-    path("new_car_registration/", views.new_car_registration_view, name="new_car_registration"),
+    path('new_registration/', views.new_car_registration, name='new_car_registration'),
+    path('thankyou', views.thankyou_view, name='thankyou'),
     path("manage_user.html/", views.manage_user_view, name="manage_user"),
     path('admin/', views.admin_view, name='admin_view'),
     # path('create/', views.new_car_registration_view,name="new_car_registration")
